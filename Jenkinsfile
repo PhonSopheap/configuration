@@ -15,7 +15,7 @@ node {
                         sh 'git add .'
                         sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
                         sh 'git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/configuration.git HEAD:main'
-                        emailext body: 'I hope it works!', subject: 'Testing', to: 'reportteam168@gmail.com'
+                        emailext body: 'Deploy successfully!', subject: 'Testing', to: 'reportteam168@gmail.com'
       }
     }
   }
